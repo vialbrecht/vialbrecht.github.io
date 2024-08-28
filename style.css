@@ -90,3 +90,9 @@ body {
     padding: 12px 0;
    
 }
+
+.carousel-item {
+
+    height: 300;
+    padding: 200;
+}
