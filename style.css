@@ -1,98 +1,142 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --laranja-claro: #311a09;/*modifica a cor da fonte*/
 }
+
 body {
-    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-family: 'Montserrat';
 }
-.cabecalho {
-    background-color: #424E61;
-    color: white;
+
+header {
+    background-color: #ffffff;
+}
+
+
+section {
+    padding-bottom: 5rem;
+}
+
+
+.nav-link {
+    color: #2e31db;/*modifica as cores dos botões inicio, galeria e contato*/
+    font-weight: 600;
+}
+
+.inicio-fundo {
+    /* aula 3 */
+    background-image: url('img/240_F_622404841_FJ34lNKx4J4LBknp1Ni4DEhYl6ro4K46.jpg');/*insere a imagem na introdução ao bem vindos*/
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    background-position: right;
+    border-radius: 80px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+}
+
+/* posicionamento para a imagem à direita */
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 45rem;
+    height: auto;
+}
+
+
+.esquerda-conteudo {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+.botao-inicio {
+    background-color: var(--laranja-claro);
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    /* Convertido para em aumenta o tamanho da fonte por tabela*/
+    height: 3em;
+    /* Convertido para em */
+    align-content: center;
+
+}
+
+.display-4 {
+    text-shadow: -5px 5px var(--laranja-claro);
+}
+
+
+#tropicalia {
+    position: relative;
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: url('img/flor.png') top right no-repeat,/*insere a flor a direita superior da galeria*/
+        url('img/flor-esquerda.png') bottom left no-repeat;/*insere a flor a esquerda inferior da galeria*/
+    background-size: 180px 180px;
+    /* Ajuste o tamanho conforme necessário */
+}
+
+#tropicalia .container {
+    display: flex;
     align-items: center;
-    padding: 24px 0;
-}
-
-.cabecalho-imagem{
-    width: 10%;
-}
-
-.cabecalho-lista-item{
-    display: inline-block;
-    margin: 0 16px;
-    font-size: 16px;
-}
-
-.cabecalho-lista-item a{
-    text-decoration: none; 
-    color: white;
-}
-
-.escola-imagem{
-    width: 25%;
-}
-
-#escola{
-    background-image: linear-gradient(#424E61,#16CFF8);
-    color:white;
-    display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 24px 0;
-}
-
-.escola-div-conteudo{
-    width: 35%;
+    position: relative;
+    z-index: 1;
+    /* Garante que o conteúdo fica acima das imagens do background */
 }
 
 
-.escola-titulo{
-    padding: 24px 0;
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--laranja-claro);
 }
 
-#estudante{
-    padding: 24px 0;
+#galeria {
+    background-color: #448163; /*modifica o fundo da galeria*/
+
 }
 
-
-.estudante-imagem{
-    width: 120px;
+.fundo-galeria {
+    background: url('img/flor-bottom-direita.png') bottom right no-repeat;
+    background-size: 180px 180px;
 }
 
-.estudante-icone{
-    width: 24px;
-    padding: 4px 8px;
+#contato {
+    background-image: url('img/suricato.jpg'); /*modifica o fundo do formulario entre em contato*/
+    background-size: cover;
+    padding: 4rem 0;
+    /* Espaçamento interno para a seção de contato */
+
 }
 
-.estudante-div{
-    text-align: center;
-    padding: 16px 0;
+.formulario {
+    background-color: #9c5d5d;/*modifica o plano de fundo do formulário*/
+    padding: 2rem;
+    /* Espaçamento interno dentro do formulário */
+    border-radius: 10px;
+    /* Borda arredondada para o formulário */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Sombra suave para destacar o formulário */
+    font-weight: bold;
 }
 
-.estudante-titulo{
-    text-align: center;
-    padding: 50px 0;
+.formulario button {
+    background-color: #267c1e; /*modifica o botão enviar msg*/
+    border: none;
+    font-weight: bold;
 }
 
-.estudante-todos{
-    display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
-}
-
-.rodape{
-    background-color: black;
-    text-align: center;
-}
-
-.rodape-imagem{
-    height: 60px;
-    padding: 12px 0;
-   
-}
-
-.carousel-item {
-
-    height: 300;
-    padding: 200;
+/* chama classe do bootstrap para modificar a cor */
+.form-control {
+    background-color: #f3e6e6;/* modifica a seção entre em contato*/
 }
